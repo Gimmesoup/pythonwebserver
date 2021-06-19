@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon"
+    href="https://cdn.glitch.com/41936386-02ac-403a-9fbc-50dbaf8ea4e8%2FNew%20Project(1).ico?v=1623369501958" />
+  <title>Menu | Online Worldwide Ordering | FoodWarp</title>
+
+  <!-- meta tags + SEO meta tags-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://fakedelivery.glitch.me/" />
+  <meta name="description"
+    content="The world is literally your oyster. Warp food instantly from anywhere you want, at any time you want." />
+  <meta name="keywords" content="International, Worldwide, Food, Delivery, Warp, FoodWarp">
+
+  <!-- Import js/css -->
+  <script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+</head>
+
+<body>
+  <header class="header">
+    <a href="/"><img src = "https://cdn.glitch.com/41936386-02ac-403a-9fbc-50dbaf8ea4e8%2FNew%20Project(3).png?v=1623476620035" alt="FoodWarplogo" /></a>
+  </header>
+
+  <div class="center">
+    <!-- Order Form Wrapper -->
+    <div class="orderformwrapper">
+
+      <!-- Order Form -->
+      <form action="/success" method="post">
+        <input type="hidden" id="restID" name="restID" value="{{ rID }}">
+          <input type="text" id="userName" name="userName" placeholder="Enter Your Name Here" class="textentrystyledinput" required>
+        <br class="disappearingbr" /><br class="disappearingbr"/>
+
+        <!-- loop the following in template -->
+        <div class="numberfieldrightalign">
+        {% for key, value in rFoods.items() %}
+          {{ key }} ${{ value }}
+          <input type="number" id="amountOfItem" name="{{ key }} ${{ value }}" min="0" max="9999999999" value="0" class="numberentrystyledinput">
+          <br class="disappearingbr" /><br class="disappearingbr" />
+        {% endfor %}
+        </div>
+        <input type="submit" value="Submit Order" class="submitbuttonstyledinput">
+      </form>
+
+    </div>
+  </div>
+
+  <div class="verticalspacer"></div>
+  <footer class="footer">
+    <div class="footertop">
+      <ul>
+        <li><h2>Get to Know Us</h2></li>
+        <li><a href="footer_aboutus">About Us</a></li>
+        <li><a href="footer_giftcards">Gift Cards</a></li>
+        <li><a href="footer_careers">Careers</a></li>
+        <li><a href="footer_investors">Investors</a></li>
+      </ul>
+      <ul>
+        <li><h2>Need Help?</h2></li>
+        <li><a href="footer_faq">FAQ</a></li>
+        <li><a href="footer_contactus">Contact Us</a></li>
+      </ul>
+      
+      <img src="https://cdn.glitch.com/41936386-02ac-403a-9fbc-50dbaf8ea4e8%2FNew%20Project(2).png?v=1623474327654" alt="foodteleporting" />
+      <div style="clear: both;"></div>
+    </div>
+
+    <div class="footerbot">
+      <p class="floatleft">
+        © 2021 FoodWarp
+      </p>
+      <p class="floatright">
+        <a href="footer_termsofservice">Terms of Service</a>
+        <a href="footer_privacypolicy">Privacy Policy</a>
+        <a href="footer_donotsellmyinfo">Do Not Sell My Info</a>
+      </p>
+      <div style="clear: both;"></div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+/* Body Setup */
+/* #region */
+body {
+  margin: 0px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Candal', sans-serif;
+}
+.verticalspacer {
+  flex: 1;
+}
+/* #endregion */
+
+/* Header */
+/* #region */
+header {
+  background-color: white;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+/* #endregion */
+
+/* Footer */
+/* #region */
+footer {
+  background-color: black;
+  color: white;
+  padding: 1px;
+}
+.footertop {
+  margin: 30px;
+  text-align: left;
+}
+.footertop > ul {
+  padding-left: 100px;
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: top
+}
+.footertop > ul > li {
+  padding-top: 10px;
+}
+.footertop > ul > li > a {
+  padding-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+.footertop > ul > li > a:hover {
+  text-decoration: underline;
+}
+.footertop > img {
+  padding-left: 100px;
+  list-style-type: none;
+  float: right;
+  margin-right: 100px;
+  margin-top: 50px;
+}
+.footerbot {
+  border-top: 1px solid white;
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.footerbot > p > a {
+  padding-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+.footerbot > p > a:hover {
+  text-decoration: underline;
+}
+/* #endregion */
+
+
+
+
+/* (homepage) */
+/* #region */
+
+/* Banner (homepage) */
+/* #region */
+.bannerwrapper {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.addressformtitlewrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bannerwrapper > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.addressformtitlewrapper > h1 {
+  background-color: rgba(97, 7, 7, 0.4);
+}
+/* #endregion */
+
+/* FormWrapper */
+/* #region */
+.formwrappercontainer {
+  position: relative;
+  text-align: center;
+  margin: 50px;
+  height: 100px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.formwrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* #endregion */
+
+/* Restaurant Showcase Grid (homepage) */
+/* #region */
+.gridwrapper {
+  background-color: #f2f2f2;
+}
+.gridcontainer {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  padding: 100px;
+  margin: 50px;
+}
+.gridrest {
+  background-image: url("https://cdn.glitch.com/41936386-02ac-403a-9fbc-50dbaf8ea4e8%2F1b0e438f-bd06-48b1-b4fd-c2e5be3f6ea0.image.png?v=1624059060751");
+  background-position: center; 
+  border-radius: 10px;
+  padding: 50px;
+  text-align: center;
+}
+.gridwrapper > h2{
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 75px;
+}
+.gridwrapper > h1{
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 75px;
+}
+.restStyledInput {
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* #endregion */
+
+/* #endregion */
+
+/* (orderpage) */
+/* #region */
+.orderformwrapper {
+  display: inline-block;
+}
+/* #endregion */
+
+/* Centered wrapper */
+/* #region */
+.center {
+  margin: 150px;
+  text-align: center;
+}
+/* #endregion */
+
+/* Form Styling */
+/* #region */
+.submitbuttonstyledinput {
+  border: 2px solid #ff3300;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 50px;
+  background-color: #ff3300;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.textentrystyledinput {
+  border: 2px solid #ff3300;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 50px;
+  background-color: white;
+}
+.numberentrystyledinput {
+  -moz-appearance: textfield;
+  -webkit-appearance: none; 
+  appearance: textfield;
+  border: 2px solid black;
+}
+.numberfieldrightalign {
+  text-align: right;
+}
+input[type='number']{
+  text-align: center; 
+  width: 20px;
+}
+input[type=text] {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 50px;
+}
+.formbox {
+  border: 1px solid #ff3300;
+  border-radius: 33px;
+}
+/* #endregion */
+
+/* Table Styling */
+/* #region */
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  border-spacing: 5px;
+  border-bottom: 3px solid #e6e6e6;
+  width: 50%;
+}
+td, th {
+  padding: 0 15px 0 15px;
+}
+.totalLine {
+  border-bottom: none;
+}
+.rightalign {
+  text-align: right;
+}
+/* #endregion */
+
+
+
+
+/* For Left/Right align text on same line */
+/* #region */
+.floatleft {
+	float: left;
+}
+.floatright {
+	float: right;
+}
+/* #endregion */
+
+/* Complementary color link */
+/* #region */
+.complementcolorlink {
+  color: #0066cc  
+}
+.complementcolorlink:visited {
+  color: #0066cc
+}
+.complementcolorlink:hover {
+  color: #80bfff
+}
+.complementcolorlink:active {
+  color: #b3d9ff
+}
+/* #endregion */
+
+
+
+/* Media queries; adaptive/responsive layout */
+/* #region */
+@media (max-width: 1520px) {
+  .gridcontainer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+@media (max-width: 1300px) {
+  .restStyledInput {
+    white-space: normal;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 18px;
+  }
+  .restSelecth1 {
+    font-size: 32px;
+  }
+  .formwrappercontainer {
+    margin: 20px;
+    border: 0px solid red;
+  }
+  .gridcontainer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .restStyledInput {
+    font-size: 12px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .gridwrapper > h2{
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .gridwrapper > h1{
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .orderformwrapper {
+    white-space: pre-line;
+  }
+  .numberfieldrightalign {
+    text-align: center;
+  }
+  .disappearingbr { 
+    display: none; 
+  }
+  td, th {
+    padding: 0 0px 0 0px;
+    border-right: 1px dashed gray;
+  }
+}
+/* #endregion */
